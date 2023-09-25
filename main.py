@@ -18,3 +18,11 @@ class TESSA:
                 print("Sorry, I didn't catch that.")
                 return None
 
+    def process_command(self, command):
+        """
+        Process the given command and execute the appropriate action.
+        """
+        # For simplicity, we'll just print the command now. Later, you'll add actual actions.
+        if command:
+            print(f"You said: {command}")
+
