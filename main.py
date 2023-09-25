@@ -32,3 +32,14 @@ class TESSA:
         """
         return "hey tessa" in command.lower()
 
+    def run(self):
+        """
+        Main loop to keep TESSA running and listening for the wake word.
+        """
+        while True:
+            command = self.listen()
+            if command and self.wake_word_detected(command):
+                print("Activated! What can I do for you?")
+                command = self.listen()
+                self.process_command(command)
+
