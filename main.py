@@ -43,3 +43,6 @@ class TESSA:
                 command = self.listen()
                 self.process_command(command)
 
+if __name__ == "__main__":
+    tessa = TESSA()
+    tessa.run()
