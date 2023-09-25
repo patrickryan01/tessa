@@ -29,7 +29,7 @@ SECRET_KEY = os.urandom(32)  # This generates a new key on each run. Store secur
 
 @app.route("/weather", methods=["GET"])
 def get_weather():
-    city = request.args.get("city", default="London,uk")  # Default is London, can be changed
+    city = request.args.get("city", default="Los Angeles,USA")
     response = requests.get(BASE_URL, params={
         "q": city,
         "appid": OPEN_WEATHER_API_KEY,
