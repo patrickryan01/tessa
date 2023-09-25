@@ -26,3 +26,9 @@ class TESSA:
         if command:
             print(f"You said: {command}")
 
+    def wake_word_detected(self, command):
+        """
+        Check if the wake word (e.g., "Hey TESSA") is present in the command.
+        """
+        return "hey tessa" in command.lower()
+
