@@ -21,7 +21,7 @@ pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
 SECRET_KEY = os.urandom(32)
 
 def encrypt(raw, key):
-
+    raw = pad(raw)
 
 @app.route("/converse", methods=["POST"])
 def converse():
