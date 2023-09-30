@@ -12,12 +12,16 @@ app = Flask(__name__)
 openai.api_key = "YOUR_OPENAI_API_KEY"
 r = redis.Redis(host='localhost', port=6379, db=0)
 
+#Smart Lock API
 LOCK_API_URL = "https://example.com/lock"
 
 # Encryption setup
 BS = 16
 pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
 SECRET_KEY = os.urandom(32)
+
+def encrypt(raw, key):
+
 
 @app.route("/converse", methods=["POST"])
 def converse():
