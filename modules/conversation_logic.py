@@ -14,6 +14,7 @@ r = redis.Redis(host='localhost', port=6379, db=0)
 
 #API UTILITIES
 LOCK_API_URL = "https://example.com/lock"
+THERMOSTAT_API_URL = "https://example.com/thermostat"
 
 # Encryption setup
 BS = 16
