@@ -80,3 +80,4 @@
     <SeekBar
         android:id="@+id/light_slider"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
