@@ -55,3 +55,4 @@
         android:background="@android:color/holo_blue_dark"/>
 
     <TextView
+        android:id="@+id/temperature_label"
