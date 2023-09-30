@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000">
+
+    <!-- User Input -->
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ask T.E.S.S.A."
+        android:layout_above="@+id/moduleBar"
+        android:layout_toLeftOf="@+id/sendButton"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_alignBottom="@id/inputText"
+        android:layout_alignParentRight="true"/>
+
+    <!-- Module Access Bar (as a sample) -->
+    <LinearLayout
+        android:id="@+id/moduleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Weather Module Button -->
+        <Button
+            android:id="@+id/weatherButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weather"/>
+
+        <!-- Calendar Module Button -->
+        <Button
+            android:id="@+id/calendarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calendar"/>
+
+        <!-- Email Module Button -->
+        <Button
+            android:id="@+id/emailButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"/>
+
+        <!-- Smart Home Module Button -->
+        <Button
+            android:id="@+id/smartHomeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Smart Home"/>
+
+        <!-- Server Monitor Button -->
+        <Button
+            android:id="@+id/serverMonitorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Server Monitor"/>
+
+        <!-- Network Monitor Button -->
+        <Button
+            android:id="@+id/networkMonitorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Network Monitor"/>
+
+        <!-- Computer Vision Button -->
+        <Button
+            android:id="@+id/computerVisionButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vision"/>
+
+    </LinearLayout>
+
+    <!-- Chat History (example with a ListView, but RecyclerView would be better for larger histories) -->
+    <ListView
+        android:id="@+id/chatHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/inputText"
+        android:layout_below="@+id/userProfile"/>
+
+    <!-- User Profile and Status Information -->
+    <LinearLayout
+        android:id="@+id/userProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/userProfilePicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/default_profile_picture"/>
+
+        <TextView
+            android:id="@+id/userProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"/>
+
+    </LinearLayout>
+</RelativeLayout>
