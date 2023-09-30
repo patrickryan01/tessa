@@ -62,3 +62,4 @@
         android:textColor="@android:color/white"/>
 
     <SeekBar
+        android:id="@+id/temperature_slider"
