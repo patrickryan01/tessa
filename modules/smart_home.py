@@ -61,7 +61,8 @@ def set_temperature():
     else:
         return jsonify({"error": "Failed to set temperature."}), 400
     
-@app.route("/lock", methods=["POST"])    
+@app.route("/lock", methods=["POST"])
+def lock():    
 
 if __name__ == "__main__":
     app.run(ssl_context=("path_to_cert.pem", "path_to_key.pem"))
