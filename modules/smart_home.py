@@ -77,6 +77,7 @@ def unlock():
     response = requests.post(f"{LOCK_API_URL}/unlock")
     
     if response.status_code == 200:
+        encrypted_data = encrypt(response.text, SECRET_KEY)
 
     
 if __name__ == "__main__":
