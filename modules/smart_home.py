@@ -73,6 +73,7 @@ def lock():
         return jsonify({"error": "Failed to lock the door."}), 400    
 
 @app.route("/unlock", methods=["POST"])
+def unlock():
 
     
 if __name__ == "__main__":
