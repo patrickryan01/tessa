@@ -68,7 +68,8 @@ def lock():
     
     if response.status_code == 200:
         encrypted_data = encrypt(response.text, SECRET_KEY)
-    
+        return jsonify({"data": encrypted_data.decode('utf-8')})
+
     
 if __name__ == "__main__":
     app.run(ssl_context=("path_to_cert.pem", "path_to_key.pem"))
