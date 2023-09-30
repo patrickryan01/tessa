@@ -24,6 +24,8 @@ def encrypt(raw, key):
     raw = pad(raw)
     iv = os.urandom(AES.block_size)
     cipher = AES.new(key, AES.MODE_CBC, iv)
+    return base64.b64encode(iv + cipher.encrypt(raw))
+
 
 
 @app.route("/converse", methods=["POST"])
