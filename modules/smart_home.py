@@ -74,6 +74,7 @@ def lock():
 
 @app.route("/unlock", methods=["POST"])
 def unlock():
+    response = requests.post(f"{LOCK_API_URL}/unlock")
 
     
 if __name__ == "__main__":
