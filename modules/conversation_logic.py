@@ -27,6 +27,7 @@ def encrypt(raw, key):
     return base64.b64encode(iv + cipher.encrypt(raw))
 
 def decrypt(enc, key):
+    enc = base64.b64decode(enc)
 
 
 @app.route("/converse", methods=["POST"])
