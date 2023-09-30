@@ -66,7 +66,8 @@ def lock():
     # Example call to smart lock system API
     response = requests.post(f"{LOCK_API_URL}/lock")
     
-    
+    if response.status_code == 200:
+  
     
 if __name__ == "__main__":
     app.run(ssl_context=("path_to_cert.pem", "path_to_key.pem"))
