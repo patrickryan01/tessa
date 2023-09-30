@@ -40,5 +40,4 @@
 
     <Button
         android:id="@+id/spotify_button"
-
-</LinearLayout>
+        android:layout_width="match_parent"
