@@ -30,7 +30,7 @@ def decrypt(enc, key):
     enc = base64.b64decode(enc)
     iv = enc[:AES.block_size]
     cipher = AES.new(key, AES.MODE_CBC, iv)
-
+    return unpad(cipher.decrypt(enc[AES.block_size:])).decode('utf-8')
 
 @app.route("/converse", methods=["POST"])
 def converse():
