@@ -70,3 +70,4 @@
         android:thumbTint="@android:color/holo_blue_dark"
         android:progressTint="@android:color/holo_blue_dark"/>
 
+    <TextView
