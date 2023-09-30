@@ -23,3 +23,4 @@ T.E.S.S.A. is an ambitious project aimed at emulating the versatile functionalit
 * Written in kotlin
 
 # T.E.S.S.A. Tablet
+*Written in kotlin
