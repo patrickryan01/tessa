@@ -72,3 +72,4 @@
 
     <TextView
         android:id="@+id/light_label"
+        android:layout_width="match_parent"
