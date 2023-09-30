@@ -77,3 +77,4 @@
         android:text="Light"
         android:textColor="@android:color/white"/>
 
+    <SeekBar
