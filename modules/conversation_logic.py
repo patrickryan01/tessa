@@ -18,9 +18,11 @@ THERMOSTAT_API_URL = "https://example.com/thermostat"
 LOCK_API_URL = "https://example.com/lock"
 
 # Encryption setup
-BS = 16
-pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
-SECRET_KEY = os.urandom(32)
+def pad(s):
+    return s + b"\0" * (AES.block_size - len(s) % AES.block_size)
+
+def unpad(s):
+    return s.rstrip(b"\0")
 
 def encrypt(raw, key):
     raw = pad(raw)
