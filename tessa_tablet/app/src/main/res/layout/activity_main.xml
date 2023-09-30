@@ -45,3 +45,5 @@
         android:text="Play Music on Spotify"
         android:textColor="@android:color/white"
         android:background="@android:color/holo_blue_dark"/>
+
+    <Button
