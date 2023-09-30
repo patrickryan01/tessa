@@ -23,6 +23,8 @@ SECRET_KEY = os.urandom(32)
 def encrypt(raw, key):
     raw = pad(raw)
     iv = os.urandom(AES.block_size)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+
 
 @app.route("/converse", methods=["POST"])
 def converse():
