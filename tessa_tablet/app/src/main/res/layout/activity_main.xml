@@ -71,3 +71,4 @@
         android:progressTint="@android:color/holo_blue_dark"/>
 
     <TextView
+        android:id="@+id/light_label"
