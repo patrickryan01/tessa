@@ -18,3 +18,6 @@ T.E.S.S.A. is an ambitious project aimed at emulating the versatile functionalit
 # Acknowledgements
 * OpenAI's GPT models for NLP capabilities.
 * And all other libraries and tools that made this project possible.
+
+# T.E.S.S.A. Mobile
+* Written in kotlin
