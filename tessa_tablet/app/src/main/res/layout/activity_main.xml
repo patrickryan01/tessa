@@ -39,3 +39,6 @@
         android:background="@android:color/holo_blue_dark"/>
 
     <Button
+        android:id="@+id/spotify_button"
+
+</LinearLayout>
