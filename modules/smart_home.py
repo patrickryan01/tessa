@@ -79,6 +79,7 @@ def unlock():
     if response.status_code == 200:
         encrypted_data = encrypt(response.text, SECRET_KEY)
         return jsonify({"data": encrypted_data.decode('utf-8')})
+    else:
 
     
 if __name__ == "__main__":
