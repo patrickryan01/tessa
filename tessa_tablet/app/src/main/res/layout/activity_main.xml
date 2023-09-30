@@ -47,3 +47,4 @@
         android:background="@android:color/holo_blue_dark"/>
 
     <Button
+        android:id="@+id/smart_camera_button"
