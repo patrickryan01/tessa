@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import requests, os, redis, openai
 from Crypto.Cipher import AES
 import base64
+import requests
 from gtts import gTTS
 import speech_recognition as sr
 
