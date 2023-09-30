@@ -80,7 +80,7 @@ def unlock():
         encrypted_data = encrypt(response.text, SECRET_KEY)
         return jsonify({"data": encrypted_data.decode('utf-8')})
     else:
-
+        return jsonify({"error": "Failed to unlock the door."}), 400
     
 if __name__ == "__main__":
     app.run(ssl_context=("path_to_cert.pem", "path_to_key.pem"))
