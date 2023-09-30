@@ -53,3 +53,5 @@
         android:text="Check Smart Cameras"
         android:textColor="@android:color/white"
         android:background="@android:color/holo_blue_dark"/>
+
+    <TextView
