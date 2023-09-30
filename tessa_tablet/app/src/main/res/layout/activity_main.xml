@@ -68,3 +68,5 @@
         android:max="100"
         android:progress="50"
         android:thumbTint="@android:color/holo_blue_dark"
+        android:progressTint="@android:color/holo_blue_dark"/>
+
