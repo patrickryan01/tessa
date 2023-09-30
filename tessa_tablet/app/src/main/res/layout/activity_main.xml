@@ -61,3 +61,4 @@
         android:text="Temperature"
         android:textColor="@android:color/white"/>
 
+    <SeekBar
