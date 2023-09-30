@@ -29,6 +29,7 @@ def encrypt(raw, key):
 def decrypt(enc, key):
     enc = base64.b64decode(enc)
     iv = enc[:AES.block_size]
+    cipher = AES.new(key, AES.MODE_CBC, iv)
 
 
 @app.route("/converse", methods=["POST"])
