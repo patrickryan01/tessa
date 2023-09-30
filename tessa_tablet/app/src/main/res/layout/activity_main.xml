@@ -14,3 +14,19 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_dark">
 
+    <Button
+        android:id="@+id/voice_activation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activate Voice"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search the internet"
+        android:textColor="@android:color/white"
+        android:background="@android:color/background_dark"/>
+
