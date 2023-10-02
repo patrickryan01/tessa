@@ -113,3 +113,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         if (status == TextToSpeech.SUCCESS) {
             textToSpeech.language = Locale.US
         }
+    }
