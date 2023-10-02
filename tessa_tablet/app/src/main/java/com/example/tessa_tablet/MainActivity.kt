@@ -129,3 +129,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
             }
         }
         builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
+        builder.show()
