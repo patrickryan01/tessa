@@ -102,3 +102,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
             voiceOutput.append("You said: $transcript\n")
             // Add your response logic here
         }
+        voiceButton.text = "Speak"
