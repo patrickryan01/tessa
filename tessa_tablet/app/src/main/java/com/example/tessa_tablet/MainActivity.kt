@@ -115,3 +115,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         }
     }
 
+    private fun promptTemperature(): Int? {
