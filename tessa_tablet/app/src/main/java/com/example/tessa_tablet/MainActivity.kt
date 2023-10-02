@@ -125,3 +125,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
             val temperature = input.text.toString().toIntOrNull()
             if (temperature != null) {
                 statusIcon.text = "⚠️"
+                statusText.text = "Temperature set to $temperature degrees."
