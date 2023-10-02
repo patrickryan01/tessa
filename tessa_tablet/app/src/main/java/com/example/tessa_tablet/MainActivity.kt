@@ -128,3 +128,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
                 statusText.text = "Temperature set to $temperature degrees."
             }
         }
+        builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
