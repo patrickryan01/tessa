@@ -87,3 +87,113 @@
     
             #voice-output {
                 background-color: #424242;
+                color: #fff;
+                font-size: 18px;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: none;
+                border-radius: 5px;
+                width: 100%;
+                height: 100px;
+                overflow-y: scroll;
+            }
+    
+            #voice-button {
+                background-color: #f44336;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+    
+            #voice-button:hover {
+                background-color: #e53935;
+            }
+    
+            #voice-icon {
+                font-size: 36px;
+                margin-right: 10px;
+            }
+    
+            #status-icon {
+                font-size: 36px;
+                margin-right: 10px;
+            }
+    
+            #status-text {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+    
+            #status-ok {
+                color: #4caf50;
+            }
+    
+            #status-warning {
+                color: #ff9800;
+            }
+    
+            #status-error {
+                color: #f44336;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">J.A.R.V.I.S.</div>
+        <div id="main">
+            <div id="left-panel">
+                <div class="card">
+                    <div class="card-title">Voice Input</div>
+                    <input type="text" id="voice-input" placeholder="Speak here...">
+                    <button class="btn btn-large" id="voice-button"><i class="material-icons" id="voice-icon">mic_none</i>Speak</button>
+                </div>
+                <div class="card">
+                    <div class="card-title">Voice Output</div>
+                    <div id="voice-output"></div>
+                </div>
+            </div>
+            <div id="right-panel">
+                <div class="card">
+                    <div class="card-title">System Status</div>
+                    <div id="status-icon"><i class="material-icons">check_circle</i></div>
+                    <div id="status-text"><span id="status-ok">All systems are operational.</span></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Actions</div>
+                    <button class="btn" id="lights-button">Lights On/Off</button>
+                    <button class="btn" id="temperature-button">Set Temperature</button>
+                    <button class="btn" id="music-button">Play Music</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            // Voice recognition and response
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.lang = "en-US";
+    
+            const voiceInput = document.getElementById("voice-input");
+            const voiceOutput = document.getElementById("voice-output");
+            const voiceButton = document.getElementById("voice-button");
+            const voiceIcon = document.getElementById("voice-icon");
+    
+            voiceButton.addEventListener("click", () => {
+                if (voiceButton.innerText === "Stop") {
+                    recognition.stop();
+                    voiceButton.innerText = "Speak";
+                    voiceIcon.innerText = "mic_none";
+                } else {
+                    recognition.start();
+                    voiceButton.innerText = "Stop";
+                    voiceIcon.innerText = "mic";
+                }
+            });
+    
+            recognition.onresult = (event) => {
+                const results = event.results;
