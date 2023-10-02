@@ -119,3 +119,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Set Temperature")
         val input = EditText(this)
+        input.inputType = InputType.TYPE_CLASS_NUMBER
