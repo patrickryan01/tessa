@@ -127,3 +127,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
                 statusIcon.text = "⚠️"
                 statusText.text = "Temperature set to $temperature degrees."
             }
+        }
