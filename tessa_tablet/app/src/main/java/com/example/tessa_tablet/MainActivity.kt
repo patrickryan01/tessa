@@ -87,3 +87,5 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
     override fun onBeginningOfSpeech() {}
 
     override fun onRmsChanged(rmsdB: Float) {}
+
+    override fun onBufferReceived(buffer: ByteArray?) {}
