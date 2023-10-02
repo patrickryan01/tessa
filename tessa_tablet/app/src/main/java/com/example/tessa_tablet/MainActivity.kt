@@ -95,3 +95,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
     override fun onError(error: Int) {}
 
     override fun onResults(results: Bundle?) {
+        val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
