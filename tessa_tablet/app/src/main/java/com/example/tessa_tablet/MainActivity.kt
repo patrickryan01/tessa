@@ -106,3 +106,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
     }
 
     override fun onPartialResults(partialResults: Bundle?) {}
+
