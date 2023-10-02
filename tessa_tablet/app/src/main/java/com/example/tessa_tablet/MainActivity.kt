@@ -85,3 +85,5 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
     override fun onReadyForSpeech(params: Bundle?) {}
 
     override fun onBeginningOfSpeech() {}
+
+    override fun onRmsChanged(rmsdB: Float) {}
