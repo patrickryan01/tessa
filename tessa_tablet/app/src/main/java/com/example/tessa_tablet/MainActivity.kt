@@ -132,3 +132,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         builder.show()
         return null
     }
+}
