@@ -82,3 +82,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         }
     }
 
+    override fun onReadyForSpeech(params: Bundle?) {}
