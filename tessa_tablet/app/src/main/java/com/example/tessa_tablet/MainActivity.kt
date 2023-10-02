@@ -100,3 +100,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
             val transcript = matches[0]
             voiceInput.setText(transcript)
             voiceOutput.append("You said: $transcript\n")
+            // Add your response logic here
