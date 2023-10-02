@@ -98,3 +98,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
         if (matches != null) {
             val transcript = matches[0]
+            voiceInput.setText(transcript)
