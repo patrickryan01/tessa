@@ -121,3 +121,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         val input = EditText(this)
         input.inputType = InputType.TYPE_CLASS_NUMBER
         builder.setView(input)
+        builder.setPositiveButton("OK") { _, _ ->
