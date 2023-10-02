@@ -104,3 +104,5 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         }
         voiceButton.text = "Speak"
     }
+
+    override fun onPartialResults(partialResults: Bundle?) {}
