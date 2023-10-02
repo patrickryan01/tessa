@@ -111,3 +111,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
+            textToSpeech.language = Locale.US
