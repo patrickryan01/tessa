@@ -93,3 +93,5 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
     override fun onEndOfSpeech() {}
 
     override fun onError(error: Int) {}
+
+    override fun onResults(results: Bundle?) {
