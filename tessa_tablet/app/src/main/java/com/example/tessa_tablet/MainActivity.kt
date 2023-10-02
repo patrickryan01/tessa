@@ -122,3 +122,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         input.inputType = InputType.TYPE_CLASS_NUMBER
         builder.setView(input)
         builder.setPositiveButton("OK") { _, _ ->
+            val temperature = input.text.toString().toIntOrNull()
