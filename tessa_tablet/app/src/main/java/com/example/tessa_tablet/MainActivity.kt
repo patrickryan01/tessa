@@ -110,3 +110,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
     override fun onEvent(eventType: Int, params: Bundle?) {}
 
     override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
