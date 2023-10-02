@@ -103,3 +103,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
             // Add your response logic here
         }
         voiceButton.text = "Speak"
+    }
