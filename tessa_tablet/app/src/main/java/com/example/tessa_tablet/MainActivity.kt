@@ -124,3 +124,4 @@ class MainActivity : AppCompatActivity(), RecognitionListener, TextToSpeech.OnIn
         builder.setPositiveButton("OK") { _, _ ->
             val temperature = input.text.toString().toIntOrNull()
             if (temperature != null) {
+                statusIcon.text = "⚠️"
