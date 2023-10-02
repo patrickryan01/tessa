@@ -197,3 +197,4 @@
     
             recognition.onresult = (event) => {
                 const results = event.results;
+                for (let i = event.resultIndex; i < results.length; i++) {
